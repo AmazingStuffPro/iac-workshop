@@ -9,6 +9,7 @@ locals {
 //-----------------------------------------
 # Fetching and filtering amazon AMI
 data "aws_ami" "ami" {
+  owners      = ["amazon"]
   most_recent = true
 
   filter {
